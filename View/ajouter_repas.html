@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajouter repas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 25px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1e8449;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ajouter repas </h1>
+
+  <div class="form-container">
+    <form action="../View/ajouter_repas.php" method="POST" enctype="multipart/form-data">
+      <label for="name">Nom du repas :</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="description">Description :</label>
+      <textarea name="description" id="description" rows="4" required></textarea>
+
+      <label for="price">Prix (DA) :</label>
+      <input type="number" name="price" id="price" step="0.01" required>
+
+      <label for="quantity">Quantité :</label>
+      <input type="number" name="quantity" id="quantity" required>
+
+      
+      <select name="category" required>
+        
+        <option value="">-- Choisissez une categorie --</option>
+        <option value="Sucré">Sucré</option>
+        <option value="Pasta">Pasta</option>
+        <option value="Grille">Grille</option>
+        <option value="Boisson">Boisson</option>
+         <option value="Pizza">Pizza</option>
+      </select>
+
+      <label for="image">Image :</label>
+      <input type="file" name="image" id="image" accept="image/*" required>
+      
+
+      <button type="submit" name="ajouter">Ajouter</button>
+    </form>
+  </div>
+
+</body>
+</html>

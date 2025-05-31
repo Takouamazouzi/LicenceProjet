@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-box {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .form-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .form-box input {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .form-box button {
+            width: 100%;
+            padding: 12px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .form-box button:hover {
+            background-color: #d35400;
+        }
+
+        .form-box p {
+            margin-top: 15px;
+            text-align: center;
+            color: #555;
+        }
+
+        .form-box a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+
+        .form-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box" id="register-form">
+        <form action="../background/signup.php" method="post">
+            <h2>S'inscrire</h2>
+            <input type="text" name="nom"  placeholder="Nom" required>
+            <input type="text" name="email"  placeholder="Email" required>
+            <input type="text" name="adresse"  placeholder="Adresse" required>
+            <input type="tel" name="telephone"  placeholder="Téléphone" required>
+            <input type="password" name="password"  placeholder="Mot de passe" required>
+            <input type="password" name="confirm_password"  placeholder=" Confirmer votre Mot de passe" required>
+            <button type="submit" id="submit" name="sinscrire">S'inscrire</button>
+            <p>J'ai déjà un compte? <a href="login.php" onclick="showForm('login-form')">Se connecter</a></p>
+        </form>
+    </div>
+</body>
+</html>
